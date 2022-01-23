@@ -1,0 +1,8 @@
+const http = require("http");
+// import app from express
+require('dotenv').config()
+const app = require("./app");
+const PORT = process.env.PORT || 8000;
+const server = http.createServer(app);
+
+server.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
